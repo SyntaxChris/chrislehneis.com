@@ -10,6 +10,24 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'nav_bar'
+ *= require 'welcome'
  *= require_tree .
  *= require_self
  */
+
+ body{
+ 	background-color: #C2FFD9;
+ 	padding: 0;
+ 	margin: 0;
+ 	// padding-bottom: 100%;
+ 	overflow: hidden;
+	svg.face{
+		position: absolute;
+		height: 100%;
+		right:0;
+		opacity: 0.9;
+	}
+ 	
+
+ }
