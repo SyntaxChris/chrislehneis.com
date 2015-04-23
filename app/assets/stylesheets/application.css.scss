@@ -20,14 +20,16 @@
  	background-color: #C2FFD9;
  	padding: 0;
  	margin: 0;
- 	// padding-bottom: 100%;
  	overflow: hidden;
+ 	font-family: 'Lato', sans-serif;
 	svg.face{
 		position: absolute;
+		z-index: 1;
 		height: 100%;
 		right:0;
-		opacity: 0.9;
+		opacity: 0.8;
+		&.fade-face{
+			opacity: 0.3;
+		}
 	}
- 	
-
  }
