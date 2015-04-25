@@ -5,22 +5,26 @@
 	height: 100%;
 	// border: 1px solid blue;
 	.title{
-		color: #A81E1E;
+		color: #FA4848;
 		font-weight: 300;
-		opacity: 0.4;
+		opacity: 1;
 		&.main{
-			font-size: 7vw;
+			font-size: 12vw;
 			margin-left: 8%;
 			margin-top: 5%;
 			.name{
-
+				
 			}
 			.description{
 				font-size: 3vw;
 				font-weight: 100;
-				// margin-left: 1%;
+				margin-left: 1%;
 				opacity: 1;
 				padding: 0;
+				span{
+					color: #1E5C8F;
+					// font-weight: 300;
+				}
 
 			}	
 		}
