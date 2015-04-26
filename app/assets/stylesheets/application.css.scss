@@ -10,42 +10,137 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'main'
  *= require 'nav_bar'
  *= require 'welcome'
  *= require_tree .
  *= require_self
  */
 
- body{
+@font-face {
+    font-family: 'crispy_regular';
+    src: font-url('f37ginger-regular-webfont.eot');
+    src: font-url('f37ginger-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('f37ginger-regular-webfont.woff') format('woff'),
+         font-url('f37ginger-regular-webfont.ttf') format('truetype'),
+         font-url('f37ginger-regular-webfont.svg#f37_gingerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'crispy_thin';
+    src: font-url('f37ginger-thin-webfont.eot');
+    src: font-url('f37ginger-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('f37ginger-thin-webfont.woff') format('woff'),
+         font-url('f37ginger-thin-webfont.ttf') format('truetype'),
+         font-url('f37ginger-thin-webfont.svg#f37_gingerthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
  	background-color: #C2FFD9;
  	padding: 0;
  	margin: 0;
+ 	width: 100%;
+ 	height: 100%;
  	overflow: hidden;
- 	font-family: 'Lato', sans-serif;
- 	.title{
- 		position: absolute;
- 		// border: 1px solid red;
- 		z-index: 0;
- 		width: 100%;
- 		opacity: 0.7;
- 		.header{
-			color: #FA4848;
-			font-size: 15vw;
-			line-height: 2;
-			margin-left: 6%;
- 		}
- 		.sub-header{
-
- 		}
- 	}
+ 	font-family: 'crispy_thin', 'Lato', sans-serif;
 	svg.face{
 		position: absolute;
-		z-index: 2;
+		z-index: 1;
 		height: 100%;
 		right:0;
+		// opacity: 0.8;
+	}
+	.main-cntnr{
+		position: absolute;
+		z-index: 2;
+		left: 150px;
+		top: 0%;
+		width: 60%;
+		height: 100%;
+		background: white;
+		border-right: 1px solid #A62828;
 		opacity: 0.8;
-		&.fade-face{
-			opacity: 0.3;
+		overflow: hidden;
+		overflow-y: scroll;
+		.header{
+			font-size: 40px;
+			text-align: center;
+			span{
+				color: #A62828
+			}
+		}
+		.body{
+			font-size: 16px;
+			padding: 0 5% 0 5%;
 		}
 	}
+ }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 500px) {
+	body{
+		svg.face{
+			position: absolute;
+			z-index: 1;
+			height: 100%;
+			right:0;
+			// opacity: 0.7;
+		}
+		.nav-cntnr{
+			position: absolute;
+			z-index: 5;
+			left: 0;
+			top:0;
+			width: 120px;
+			height: 100%;
+		  	opacity: 0.9;
+			background: #8C9891;
+		  	.nav-bg{
+			    svg{
+					position: absolute;
+					left: 0;
+					height: 100%;
+					border-right: 1px solid #A62828;
+					// opacity: 1;
+			    }
+			}
+		}
+		.main-cntnr{
+			position: absolute;
+			z-index: 2;
+			left: 120px;
+			top: 0%;
+			width: 70%;
+			height: 100%;
+			background: white;
+			border-right: 1px solid #A62828;
+			opacity: 0.8;
+			overflow: hidden;
+			overflow-y: scroll;
+			.header{
+				font-size: 40px;
+				text-align: center;
+				span{
+					color: #A62828
+				}
+			}
+			.body{
+				// font-family: 'crispy_regular', 'Lato', sans-serif;
+				font-size: 16px;
+				padding: 0 5% 0 5%;
+			}
+		}
+	 }
  }
