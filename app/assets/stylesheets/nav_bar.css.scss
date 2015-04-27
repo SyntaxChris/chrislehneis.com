@@ -1,64 +1,24 @@
-@mixin animate($name, $duration, $timing, $iteration){
-  -webkit-animation-name: $name;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-timing-function: $timing;
-  -webkit-animation-iteration-count: $iteration;
-  -moz-animation-name: $name;
-  -moz-animation-duration: $duration;
-  -moz-animation-timing-function: $timing;
-  -moz-animation-iteration-count: $iteration;
-  -ms-animation-name: $name;
-  -ms-animation-duration: $duration;
-  -ms-animation-timing-function: $timing;
-  -ms-animation-iteration-count: $iteration;
-  -o-animation-name: $name;
-  -o-animation-duration: $duration;
-  -o-animation-timing-function: $timing;
-  -o-animation-iteration-count: $iteration;
-  animation-name: $name;
-  animation-duration: $duration;
-  animation-timing-function: $timing;
-  animation-iteration-count: $iteration;
-}
-
-.nav-cntnr{
-	position: absolute;
-	z-index: 5;
-	left: 0;
-	top:0;
-	width: 150px;
-	height: 100%;
-  opacity: 0.9;
-	background: #8C9891;
-  .nav-bg{
-    svg{
-      position: absolute;
-      left: 0;
-      height: 100%;
-      border-right: 1px solid #A62828;
-      opacity: 1;
-      path{
-        
-      }
-    }
-  }
+// @mixin animate($name, $duration, $timing, $iteration){
+//   -webkit-animation-name: $name;
+//   -webkit-animation-duration: $duration;
+//   -webkit-animation-timing-function: $timing;
+//   -webkit-animation-iteration-count: $iteration;
+//   -moz-animation-name: $name;
+//   -moz-animation-duration: $duration;
+//   -moz-animation-timing-function: $timing;
+//   -moz-animation-iteration-count: $iteration;
+//   -ms-animation-name: $name;
+//   -ms-animation-duration: $duration;
+//   -ms-animation-timing-function: $timing;
+//   -ms-animation-iteration-count: $iteration;
+//   -o-animation-name: $name;
+//   -o-animation-duration: $duration;
+//   -o-animation-timing-function: $timing;
+//   -o-animation-iteration-count: $iteration;
+//   animation-name: $name;
+//   animation-duration: $duration;
+//   animation-timing-function: $timing;
+//   animation-iteration-count: $iteration;
+// }
 
 
-  // svg{
-  //   cursor: pointer;
-  //   width: 100%;
-  //   .btn-outline{
-  //     stroke-dasharray: 170;
-  //     stroke-dashoffset: 170;
-  //     @include animate(line-move, 1s, linear, 1);
-  //     -webkit-animation-fill-mode: forwards;
-  //     animation-fill-mode: forwards;
-  //   }
-  // }
-
-}
-
-@-webkit-keyframes line-move {
-  0%{ stroke-dashoffset: 170}
-  100%{ stroke-dashoffset: 0}
-}

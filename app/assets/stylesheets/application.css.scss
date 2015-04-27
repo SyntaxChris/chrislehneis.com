@@ -55,12 +55,31 @@ body{
 		right:0;
 		// opacity: 0.8;
 	}
+	.nav-cntnr{
+		position: absolute;
+		z-index: 5;
+		left: 0;
+		top:0;
+		width: 150px;
+		height: 100%;
+	  	opacity: 0.95;
+		background: #8C9891;
+	  	.nav-bg{
+		    svg{
+				position: absolute;
+				left: 0;
+				height: 100%;
+				border-right: 1px solid #A62828;
+				opacity: 1;
+		    }
+		}
+	}
 	.main-cntnr{
 		position: absolute;
 		z-index: 2;
 		left: 150px;
 		top: 0%;
-		width: 60%;
+		width: 62%;
 		height: 100%;
 		background: white;
 		border-right: 1px solid #A62828;
@@ -81,29 +100,17 @@ body{
 	}
  }
 
-
-
-
-
-
-
-
-
-@media only screen and (max-width : 500px) {
+// iPhone 5s and down
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
 	body{
-		svg.face{
-			position: absolute;
-			z-index: 1;
-			height: 100%;
-			right:0;
-			// opacity: 0.7;
-		}
 		.nav-cntnr{
 			position: absolute;
 			z-index: 5;
 			left: 0;
 			top:0;
-			width: 120px;
+			width: 250px;
 			height: 100%;
 		  	opacity: 0.9;
 			background: #8C9891;
@@ -113,34 +120,38 @@ body{
 					left: 0;
 					height: 100%;
 					border-right: 1px solid #A62828;
-					// opacity: 1;
+					opacity: 0.7;
 			    }
 			}
 		}
 		.main-cntnr{
 			position: absolute;
 			z-index: 2;
-			left: 120px;
+			left: 250px;
 			top: 0%;
-			width: 70%;
+			width: 75%;
 			height: 100%;
 			background: white;
 			border-right: 1px solid #A62828;
-			opacity: 0.8;
+			opacity: 0.9;
 			overflow: hidden;
 			overflow-y: scroll;
 			.header{
-				font-size: 40px;
+				font-size: 70px;
 				text-align: center;
 				span{
 					color: #A62828
 				}
 			}
 			.body{
-				// font-family: 'crispy_regular', 'Lato', sans-serif;
-				font-size: 16px;
 				padding: 0 5% 0 5%;
+				p{
+					font-size: 3vw;	
+				}
 			}
 		}
-	 }
- }
+	}
+}
+
+
+
