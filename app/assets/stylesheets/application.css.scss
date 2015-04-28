@@ -18,60 +18,72 @@
  */
 
 @font-face {
-    font-family: 'crispy_regular';
+    font-family: 'f37ginger';
     src: font-url('f37ginger-regular-webfont.eot');
     src: font-url('f37ginger-regular-webfont.eot?#iefix') format('embedded-opentype'),
          font-url('f37ginger-regular-webfont.woff') format('woff'),
          font-url('f37ginger-regular-webfont.ttf') format('truetype'),
          font-url('f37ginger-regular-webfont.svg#f37_gingerregular') format('svg');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'crispy_thin';
+    font-family: 'f37ginger';
+    src: font-url('f37ginger-light-webfont.eot');
+    src: font-url('f37ginger-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('f37ginger-light-webfont.woff') format('woff'),
+         font-url('f37ginger-light-webfont.ttf') format('truetype'),
+         font-url('f37ginger-light-webfont.svg#f37_gingerlight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'f37ginger';
     src: font-url('f37ginger-thin-webfont.eot');
     src: font-url('f37ginger-thin-webfont.eot?#iefix') format('embedded-opentype'),
          font-url('f37ginger-thin-webfont.woff') format('woff'),
          font-url('f37ginger-thin-webfont.ttf') format('truetype'),
          font-url('f37ginger-thin-webfont.svg#f37_gingerthin') format('svg');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 }
 
-
 body{
- 	background-color: #C2FFD9;
+ 	background-color: #C9F5D9;
  	padding: 0;
  	margin: 0;
  	width: 100%;
  	height: 100%;
  	overflow: hidden;
- 	font-family: 'crispy_thin', 'Lato', sans-serif;
+ 	font-family: 'f37ginger', 'Lato', sans-serif;
+ 	font-weight: 100;
+ 	svg.navbar{
+ 		position: absolute;
+ 		z-index: 1;
+		height: 101.5%;
+		top: -0.5%;
+		left: 0;
+		opacity: 0.9;
+		.nav-link{
+			cursor: pointer;
+		}
+ 	}
 	svg.face{
 		position: absolute;
-		z-index: 1;
+		z-index: 0;
 		height: 100%;
-		right:0;
-		// opacity: 0.8;
+		right: 0;
+		opacity: 0.4;
 	}
 	.nav-cntnr{
+		border: 1px solid green;
 		position: absolute;
-		z-index: 5;
-		left: 0;
-		top:0;
-		width: 150px;
 		height: 100%;
-	  	opacity: 0.95;
-		background: #8C9891;
-	  	.nav-bg{
-		    svg{
-				position: absolute;
-				left: 0;
-				height: 100%;
-				border-right: 1px solid #A62828;
-				opacity: 1;
-		    }
+		svg{
+			height: 100%;
+			left: 0;
 		}
 	}
 	.main-cntnr{
@@ -79,11 +91,14 @@ body{
 		z-index: 2;
 		left: 150px;
 		top: 0%;
-		width: 62%;
-		height: 100%;
+		// width: 62%;
+		max-width: 500px;
+		font-size: 2vw;
+		// height: 100%;
+		padding-bottom: 30%;
 		background: white;
 		border-right: 1px solid #A62828;
-		opacity: 0.8;
+		opacity: 0.9;
 		overflow: hidden;
 		overflow-y: scroll;
 		.header{
@@ -94,36 +109,46 @@ body{
 			}
 		}
 		.body{
-			font-size: 16px;
+			font-size: 18px;
 			padding: 0 5% 0 5%;
 		}
 	}
  }
+
+@media screen and (max-width: 400px){
+	body{
+		.main-cntnr{
+			position: absolute;
+			z-index: 2;
+			left: 150px;
+			top: 0%;
+			width: 62%;
+			height: 100%;
+			background: white;
+			border-right: 1px solid #A62828;
+			opacity: 0.9;
+			overflow: hidden;
+			overflow-y: scroll;
+			.header{
+				font-size: 10vw;
+				text-align: center;
+				span{
+					color: #A62828
+				}
+			}
+			.body{
+				font-size: 4vw;
+				padding: 0 5% 0 5%;
+			}
+		}
+	}
+}
 
 // iPhone 5s and down
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
 	body{
-		.nav-cntnr{
-			position: absolute;
-			z-index: 5;
-			left: 0;
-			top:0;
-			width: 250px;
-			height: 100%;
-		  	opacity: 0.9;
-			background: #8C9891;
-		  	.nav-bg{
-			    svg{
-					position: absolute;
-					left: 0;
-					height: 100%;
-					border-right: 1px solid #A62828;
-					opacity: 0.7;
-			    }
-			}
-		}
 		.main-cntnr{
 			position: absolute;
 			z-index: 2;
@@ -137,17 +162,14 @@ and (max-device-width : 568px) {
 			overflow: hidden;
 			overflow-y: scroll;
 			.header{
-				font-size: 70px;
+				font-size: 7vw;
 				text-align: center;
 				span{
 					color: #A62828
 				}
 			}
 			.body{
-				padding: 0 5% 0 5%;
-				p{
-					font-size: 3vw;	
-				}
+				font-size: 4vw;
 			}
 		}
 	}
