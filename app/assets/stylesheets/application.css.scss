@@ -18,140 +18,226 @@
  */
 
 @font-face {
-    font-family: 'crispy_regular';
+    font-family: 'f37ginger';
     src: font-url('f37ginger-regular-webfont.eot');
     src: font-url('f37ginger-regular-webfont.eot?#iefix') format('embedded-opentype'),
          font-url('f37ginger-regular-webfont.woff') format('woff'),
          font-url('f37ginger-regular-webfont.ttf') format('truetype'),
          font-url('f37ginger-regular-webfont.svg#f37_gingerregular') format('svg');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'crispy_thin';
+    font-family: 'f37ginger';
+    src: font-url('f37ginger-light-webfont.eot');
+    src: font-url('f37ginger-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('f37ginger-light-webfont.woff') format('woff'),
+         font-url('f37ginger-light-webfont.ttf') format('truetype'),
+         font-url('f37ginger-light-webfont.svg#f37_gingerlight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'f37ginger';
     src: font-url('f37ginger-thin-webfont.eot');
     src: font-url('f37ginger-thin-webfont.eot?#iefix') format('embedded-opentype'),
          font-url('f37ginger-thin-webfont.woff') format('woff'),
          font-url('f37ginger-thin-webfont.ttf') format('truetype'),
          font-url('f37ginger-thin-webfont.svg#f37_gingerthin') format('svg');
-    font-weight: normal;
+    font-weight: 100;
     font-style: normal;
 }
 
-
 body{
- 	background-color: #C2FFD9;
+ 	background-color: #C9F5D9;
  	padding: 0;
  	margin: 0;
  	width: 100%;
  	height: 100%;
  	overflow: hidden;
- 	font-family: 'crispy_thin', 'Lato', sans-serif;
+ 	-webkit-overflow-scrolling: touch;
+ 	font-family: 'f37ginger', 'Lato', sans-serif;
+ 	font-weight: 100;
+ 	svg.navbar{
+ 		position: absolute;
+ 		z-index: 1;
+ 		top: 0;
+ 		height: 100%;
+		left: 0;
+		// opacity: 0.8;
+		.nav-link{
+			cursor: pointer;
+			// &:hover{
+			// 	font-weight: 300;
+			// }
+		}
+ 	}
 	svg.face{
 		position: absolute;
-		z-index: 1;
+		z-index: 0;
 		height: 100%;
-		right:0;
-		// opacity: 0.8;
-	}
-	.nav-cntnr{
-		position: absolute;
-		z-index: 5;
-		left: 0;
-		top:0;
-		width: 150px;
-		height: 100%;
-	  	opacity: 0.95;
-		background: #8C9891;
-	  	.nav-bg{
-		    svg{
-				position: absolute;
-				left: 0;
-				height: 100%;
-				border-right: 1px solid #A62828;
-				opacity: 1;
-		    }
-		}
+		right: 0;
+		opacity: 0.5;
 	}
 	.main-cntnr{
 		position: absolute;
-		z-index: 2;
-		left: 150px;
+		z-index: 0;
 		top: 0%;
-		width: 62%;
+		width: 65%;
+		min-width: 400px;
 		height: 100%;
-		background: white;
+		padding-top: 2%;
+		background: #FFFFFF;
 		border-right: 1px solid #A62828;
 		opacity: 0.8;
 		overflow: hidden;
 		overflow-y: scroll;
-		.header{
-			font-size: 40px;
-			text-align: center;
-			span{
-				color: #A62828
-			}
-		}
-		.body{
-			font-size: 16px;
-			padding: 0 5% 0 5%;
-		}
-	}
- }
-
-// iPhone 5s and down
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) {
-	body{
-		.nav-cntnr{
-			position: absolute;
-			z-index: 5;
-			left: 0;
-			top:0;
-			width: 250px;
+		.content{
+			min-width: 280px;
+			position: relative;
+			margin-left: 27%;;
+			margin-right: auto;
+			width: 60%;
 			height: 100%;
-		  	opacity: 0.9;
-			background: #8C9891;
-		  	.nav-bg{
-			    svg{
-					position: absolute;
-					left: 0;
-					height: 100%;
-					border-right: 1px solid #A62828;
-					opacity: 0.7;
-			    }
-			}
-		}
-		.main-cntnr{
-			position: absolute;
-			z-index: 2;
-			left: 250px;
-			top: 0%;
-			width: 75%;
-			height: 100%;
-			background: white;
-			border-right: 1px solid #A62828;
-			opacity: 0.9;
-			overflow: hidden;
-			overflow-y: scroll;
 			.header{
-				font-size: 70px;
+				font-size: 50px;
 				text-align: center;
+				font-weight: 300;
 				span{
-					color: #A62828
+					color: #A62828;
 				}
 			}
 			.body{
-				padding: 0 5% 0 5%;
-				p{
-					font-size: 3vw;	
+
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 895px){
+	body{
+	 	svg.navbar{
+			.nav-link{
+			}
+	 	}
+		svg.face{
+		}
+		.main-cntnr{
+			.content{
+				.header{
+					font-size: 40px;
+					span{
+
+					}
 				}
 			}
 		}
 	}
 }
+
+// @media only screen and (max-device-width : 800px) {
+// 	body{
+// 	 	svg.navbar{
+// 	 		height: 102%;
+// 			.nav-link{
+// 			}
+// 	 	}
+// 		svg.face{
+// 			height: 104%;
+// 		}
+// 		.main-cntnr{
+// 			width: 90%;
+// 			height: 103%;
+// 			.content{
+// 				// font-weight: 200;
+// 				.header{
+// 					font-size: 6vw;
+// 				}
+// 				.body{
+// 					font-size: 3vw;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+@media only screen and (max-device-width : 850px) {
+	body{
+	 	svg.navbar{
+	 		// height: 105%;
+	 		opacity: 1;
+
+			.nav-link{
+				opacity: 1;
+			}
+
+	 	}
+		svg.face{
+			opacity: 1;
+		}
+		.main-cntnr{
+			width: 80%;
+			// height: 103%;
+			opacity: 0.9;
+			.content{
+				width: 60%;
+				// font-weight: 200;
+				.header{
+					font-weight: 300;
+					font-size: 7vw;
+				}
+				.body{
+					p{
+						font-size: 3vw;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (max-device-width : 640px) {
+	body{
+	 	svg.navbar{
+	 		// height: 105%;
+	 		opacity: 1;
+
+			.nav-link{
+				opacity: 1;
+			}
+
+	 	}
+		svg.face{
+			opacity: 1;
+		}
+		.main-cntnr{
+			width: 100%;
+			// height: 103%;
+			opacity: 1;
+			padding-top: 4%;
+			.content{
+				width: 70%;
+				// font-weight: 200;
+				.header{
+					font-weight: 300;
+					font-size: 8vw;
+				}
+				.body{
+					p{
+						font-size: 5vw;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
 
 
 
