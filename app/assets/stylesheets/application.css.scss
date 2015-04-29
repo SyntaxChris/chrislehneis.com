@@ -68,6 +68,9 @@ body{
 		opacity: 0.8;
 		.nav-link{
 			cursor: pointer;
+			&:hover{
+				font-weight: 300;
+			}
 		}
  	}
 	svg.face{
@@ -85,6 +88,7 @@ body{
 		min-width: 400px;
 		height: 100%;
 		padding-right: 5%;
+		padding-top: 2%;
 		background: #FFFFFF;
 		border-right: 1px solid #A62828;
 		opacity: 0.8;
@@ -134,36 +138,29 @@ body{
 	}
 }
 
-// iPhone 5s and down
-// @media only screen 
-// and (min-device-width : 320px) 
-// and (max-device-width : 568px) {
-// 	body{
-// 		.main-cntnr{
-// 			position: absolute;
-// 			z-index: 2;
-// 			left: 250px;
-// 			top: 0%;
-// 			width: 75%;
-// 			height: 100%;
-// 			background: white;
-// 			border-right: 1px solid #A62828;
-// 			opacity: 0.9;
-// 			overflow: hidden;
-// 			overflow-y: scroll;
-// 			.header{
-// 				font-size: 7vw;
-// 				text-align: center;
-// 				span{
-// 					color: #A62828
-// 				}
-// 			}
-// 			.body{
-// 				font-size: 4vw;
-// 			}
-// 		}
-// 	}
-// }
+
+@media screen and (max-width: 400px){
+	body{
+	 	svg.navbar{
+			.nav-link{
+			}
+	 	}
+		svg.face{
+		}
+		.main-cntnr{
+			width: 100%;
+			.content{
+				.header{
+					font-size: 40px;
+					span{
+
+					}
+				}
+			}
+		}
+	}
+}
+
 
 
 
