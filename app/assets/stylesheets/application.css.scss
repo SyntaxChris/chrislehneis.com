@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require 'main'
- *= require 'nav_bar'
  *= require 'welcome'
  *= require_tree .
  *= require_self
@@ -50,28 +49,56 @@
     font-style: normal;
 }
 
+@mixin animate($name, $duration, $timing, $iteration){
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $timing;
+  -webkit-animation-iteration-count: $iteration;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: $name;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $timing;
+  -moz-animation-iteration-count: $iteration;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-name: $name;
+  -ms-animation-duration: $duration;
+  -ms-animation-timing-function: $timing;
+  -ms-animation-iteration-count: $iteration;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-name: $name;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: $timing;
+  -o-animation-iteration-count: $iteration;
+  -o-animation-fill-mode: forwards;
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count: $iteration;
+  animation-fill-mode: forwards;
+}
+
 body{
- 	background-color: #C9F5D9;
+ 	background-color: #C8E3D2;
  	padding: 0;
  	margin: 0;
  	width: 100%;
  	height: 100%;
  	overflow: hidden;
- 	// -webkit-overflow-scrolling: touch;
+ 	overflow-y: hidden;
+ 	-webkit-overflow-scrolling: touch;
  	font-family: 'f37ginger', 'Lato', sans-serif;
  	font-weight: 100;
  	svg.navbar{
  		position: absolute;
  		z-index: 1;
- 		top: 0;
- 		height: 100%;
+ 		bottom: 0;
+ 		height: 100.5%;
 		left: 0;
-		// opacity: 0.8;
-		.nav-link{
+		opacity: 0.8;
+		.about-link,
+		.portfolio-link,
+		.contact-link{
 			cursor: pointer;
-			// &:hover{
-			// 	font-weight: 300;
-			// }
 		}
  	}
 	svg.face{
@@ -79,27 +106,34 @@ body{
 		z-index: 0;
 		height: 100%;
 		right: 0;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	.main-cntnr{
 		position: absolute;
 		z-index: 0;
 		top: 0%;
 		width: 65%;
-		min-width: 400px;
+		min-width: 500px;
 		height: 100%;
 		padding-top: 2%;
 		background: #FFFFFF;
 		border-right: 1px solid #A62828;
-		opacity: 0.8;
+		opacity: 0.7;
 		overflow: hidden;
 		overflow-y: scroll;
+		transform: translate3d(-100%, 0, 0);
+		&.collapse{
+			@include animate(collapse, 0.2s, linear, 1);
+		}
+		&.expand{
+			@include animate(expand, 0.2s, linear, 1);
+		}
 		.content{
 			min-width: 280px;
 			position: relative;
-			margin-left: 27%;;
+			margin-left: 20%;
 			margin-right: auto;
-			width: 60%;
+			width: 70%;
 			height: 100%;
 			.header{
 				font-size: 50px;
@@ -112,9 +146,19 @@ body{
 			.body{
 
 			}
+			.about{
+
+			}
+			.portfolio{
+				display: none;
+			}
+			.contact{
+				display: none;
+			}
 		}
 	}
 }
+
 
 @media screen and (max-width: 895px){
 	body{
@@ -125,7 +169,7 @@ body{
 		svg.face{
 		}
 		.main-cntnr{
-			opacity: 0.8;
+			// opacity: 0.8;
 			.content{
 				.header{
 					font-size: 40px;
@@ -138,65 +182,48 @@ body{
 	}
 }
 
-// @media only screen and (max-device-width : 800px) {
-// 	body{
-// 	 	svg.navbar{
-// 	 		height: 102%;
-// 			.nav-link{
-// 			}
-// 	 	}
-// 		svg.face{
-// 			height: 104%;
-// 		}
-// 		.main-cntnr{
-// 			width: 90%;
-// 			height: 103%;
-// 			.content{
-// 				// font-weight: 200;
-// 				.header{
-// 					font-size: 6vw;
-// 				}
-// 				.body{
-// 					font-size: 3vw;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
 
-@media only screen and (max-device-width : 850px) {
+@media only screen and (max-device-width : 850px) and (min-device-width: 641px) {
 	body{
 	 	svg.navbar{	 		
-	 		opacity: 1;
+	 		// opacity: 1;
 			.nav-link{
-				opacity: 1;
+				// opacity: 1;
 			}
 
 	 	}
 		svg.face{
-			opacity: 1;
+			// opacity: 1;
 		}
 		.main-cntnr{
 			width: 80%;
 			// height: 103%;
-			opacity: 0.8;
+			// opacity: 0.8;
 			.content{
 				width: 60%;
 				// font-weight: 200;
 				.header{
 					font-weight: 300;
-					font-size: 7vw;
+					font-size: 6vw;
 				}
 				.body{
 					p{
-						font-size: 3vw;
+						font-size: 2.3vw;
 					}
 					
 				}
 			}
 		}
 	}
+
 }
+
+
+
+
+
+
+
 
 
 
@@ -204,19 +231,19 @@ body{
 	body{
 	 	svg.navbar{
 	 		// height: 105%;
-	 		opacity: 1;
+	 		// opacity: 1;
 
 			.nav-link{
-				opacity: 1;
+				// opacity: 1;
 			}
 
 	 	}
 		svg.face{
-			opacity: 1;
+			// opacity: 1;
 		}
 		.main-cntnr{
 			width: 100%;
-			opacity: 0.9;
+			// opacity: 0.9;
 			padding-top: 4%;
 			.content{
 				width: 70%;
@@ -235,6 +262,54 @@ body{
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes collapse {
+    0% {
+    	transform: translate3d(0, 0, 0);
+    }
+    100% {
+    	transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@-webkit-keyframes expand {
+    0% {
+    	transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    	transform: translate3d(0, 0, 0);
+    }
+}
+
+@-moz-keyframes collapse {
+    0% {width: 65%;}
+    100% {width: 0%;}
+}
+
+@-o-keyframes collapse {
+    0% {width: 65%;}
+    100% {width: 0%;}
+}
+
+@-ms-keyframes collapse {
+    0% {width: 65%;}
+    100% {width: 0%;}
+}
+
+@keyframes collapse {
+    0% {width: 65%;}
+    100% {width: 0%;}
+}
+
+
 
 
 
