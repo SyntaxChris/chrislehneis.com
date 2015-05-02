@@ -1,12 +1,101 @@
 $(document).ready(function(){
-	var cntnr = $('.main-cntnr');
+	var container = $('.main-cntnr');
+	var content = $('.cntnt');
+	var containerOpen = false;
 
-	$('.nav-link').on('click', function(){
-		if(cntnr.hasClass('expand')){
-
-			cntnr.addClass('collapse').removeClass('expand');
+	$('.about-link').on('click', function(){
+		if(containerOpen){
+			if($('.about').css('display') === 'block'){
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				containerOpen = false;
+			}else{
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				setTimeout(function(){ 
+					container.removeClass('collapse');
+					container.addClass('expand');
+					$('.about').fadeIn();
+				}, 350);
+			}
 		}else{
-			cntnr.addClass('expand');
+			if($('.about').css('display') === 'block'){
+				container.removeClass('collapse');
+				container.addClass('expand');
+			}else{
+				container.removeClass('collapse');
+				container.addClass('expand');
+				content.hide();
+				$('.about').fadeIn();
+			}
+			containerOpen = true;
+		}
+	});
+
+	$('.portfolio-link').on('click', function(){
+		if(containerOpen){
+			if($('.portfolio').css('display') === 'block'){
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				containerOpen = false;
+			}else{
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				setTimeout(function(){ 
+					container.removeClass('collapse');
+					container.addClass('expand');
+					$('.portfolio').fadeIn();
+				}, 350);
+			}
+		}else{
+			if($('.portfolio').css('display') === 'block'){
+				container.removeClass('collapse');
+				container.addClass('expand');
+			}else{
+				container.removeClass('collapse');
+				container.addClass('expand');
+				content.hide();
+				$('.portfolio').fadeIn();
+			}
+			containerOpen = true;
+		}
+	});
+
+
+
+
+	$('.contact-link').on('click', function(){
+		if(containerOpen){
+			if($('.contact').css('display') === 'block'){
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				containerOpen = false;
+			}else{
+				content.hide();
+				container.addClass('collapse');
+				container.removeClass('expand');
+				setTimeout(function(){ 
+					container.removeClass('collapse');
+					container.addClass('expand');
+					$('.contact').fadeIn();
+				}, 350);
+			}
+		}else{
+			if($('.contact').css('display') === 'block'){
+				container.removeClass('collapse');
+				container.addClass('expand');
+			}else{
+				container.removeClass('collapse');
+				container.addClass('expand');
+				content.hide();
+				$('.contact').fadeIn();
+			}
+			containerOpen = true;
 		}
 	});
 });
