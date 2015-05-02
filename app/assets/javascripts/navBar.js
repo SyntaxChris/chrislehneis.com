@@ -18,7 +18,7 @@ $(document).ready(function(){
 					container.removeClass('collapse');
 					container.addClass('expand');
 					$('.about').fadeIn();
-				}, 350);
+				}, 320);
 			}
 		}else{
 			if($('.about').css('display') === 'block'){
@@ -49,7 +49,7 @@ $(document).ready(function(){
 					container.removeClass('collapse');
 					container.addClass('expand');
 					$('.portfolio').fadeIn();
-				}, 350);
+				}, 320);
 			}
 		}else{
 			if($('.portfolio').css('display') === 'block'){
@@ -83,7 +83,7 @@ $(document).ready(function(){
 					container.removeClass('collapse');
 					container.addClass('expand');
 					$('.contact').fadeIn();
-				}, 350);
+				}, 320);
 			}
 		}else{
 			if($('.contact').css('display') === 'block'){
