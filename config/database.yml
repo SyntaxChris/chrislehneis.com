@@ -1,20 +1,21 @@
-development:
+default: &default
   adapter: postgresql
-  encoding: unicode
-  database: profile_development
+  encoding: utf8
   pool: 5
   username: Chris
+
+development:
+  <<: *default
+  database: profile_development
+
+production:
+  <<: *default
+  database: profile_production
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: profile_test
-  pool: 5
-  username: Chris
 
 staging:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: profile_staging
-  pool: 5
-  username: Chris
