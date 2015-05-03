@@ -1,20 +1,20 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: lawa_development
+  database: profile_development
   pool: 5
   username: Chris
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: lawa_test
+  database: profile_test
   pool: 5
   username: Chris
 
 staging:
   adapter: postgresql
   encoding: unicode
-  database: lawa_staging
+  database: profile_staging
   pool: 5
   username: Chris
