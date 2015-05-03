@@ -11,7 +11,7 @@ test:
   database: profile_test
   pool: 5
   username: chris
-  
+ 
 staging:
   adapter: postgresql
   encoding: unicode
