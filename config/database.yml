@@ -14,25 +14,11 @@ production:
   <<: *default
   database: profile_production
 
-development:
-  <<: *default
-  database: profile_development
-
-production:
-  <<: *default
-  database: profile_production
-
 test:
   <<: *default
   database: profile_test
-<<<<<<< HEAD
- 
-staging:
-  <<: *default
-  database: profile_staging
-=======
 
 staging:
   <<: *default
   database: profile_staging
->>>>>>> 72ff0d659e8ac6dc46dc386ad5d1cb0f34a45ecd
+
