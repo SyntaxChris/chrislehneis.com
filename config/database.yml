@@ -1,20 +1,23 @@
-development:
+default: &default
   adapter: postgresql
-  encoding: unicode
-  database: profile_development
-  pool: 5
+  host: localhost
   username: chris
+  password: my_postgres
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  database: profile_development
+
+production:
+  <<: *default
+  database: profile_production
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: profile_test
-  pool: 5
-  username: chris
  
 staging:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: profile_staging
-  pool: 5
-  username: chris
