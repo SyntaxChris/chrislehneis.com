@@ -1,8 +1,7 @@
 default: &default
   adapter: postgresql
   host: localhost
-  username: chris
-  password: my_postgres
+  username: Chris
   encoding: utf8
   pool: 5
 
@@ -11,7 +10,11 @@ development:
   database: profile_development
 
 production:
-  <<: *default
+  adapter: postgresql
+  host: localhost
+  username: chris
+  password: my_postgres
+  encoding: utf8
   database: profile_production
 
 test:
