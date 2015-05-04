@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var container = $('.main-cntnr');
-	var content = $('.cntnt');
+	var content = $('.content');
 	var containerOpen = false;
 
 

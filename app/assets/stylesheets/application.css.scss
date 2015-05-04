@@ -183,13 +183,13 @@ body{
 					color: #A62828;
 				}
 			}
-			.about{
+			&.about{
 				display: none;
 			}
-			.portfolio{
+			&.portfolio{
 				display: none;
 			}
-			.contact{
+			&.contact{
 				display: none;
 			}
 		}
