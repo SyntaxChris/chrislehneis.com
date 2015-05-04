@@ -24,4 +24,3 @@ test:
 staging:
   <<: *default
   database: profile_staging
-
