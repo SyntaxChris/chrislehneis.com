@@ -81,6 +81,8 @@ html{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -94,6 +96,7 @@ body{
  	width: 100%;
  	height: 100%;
  	overflow: hidden;
+ 	overflow-x: hidden;
  	font-family: 'f37ginger', 'Lato', sans-serif;
  	font-weight: 100;
  	.nav-wrapper{
@@ -134,6 +137,8 @@ body{
 		background: #FFFFFF;
 		border-right: 1px solid #A62828;
 		opacity: 0.7;
+		overflow: hidden;
+		overflow-x: hidden;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		-moz-transform: translate3d(-100%, 0, 0);
 		-o-transform: translate3d(-100%, 0, 0);
@@ -156,16 +161,18 @@ body{
 		height: 100%;
 		padding-top: 1%;
 	    overflow: hidden;
+	    overflow-x: hidden;
 	    overflow-y:scroll;
 	    -webkit-box-sizing: border-box;
 	    -moz-box-sizing: border-box;
 	    box-sizing: border-box;
   		-webkit-overflow-scrolling: touch;
 		.content{
-			min-width: 280px;
+			// min-width: 280px;
 			position: relative;
 			margin-left: 20%;
 			margin-right: auto;
+			overflow-x: hidden;
 			width: 70%;
 			height: 100%;
 			.header{
@@ -238,9 +245,11 @@ body{
 @media only screen and (max-device-width : 640px) {
 	body{
 		.main-cntnr{
+			min-width: 0px;
 			width: 100%;
 			padding-top: 4%;
 			// background: rgba(255, 255, 255, 0.5);
+			min-width: 0px;
 			opacity: 0.6;
 			&.collapse{
 				@include animate(collapse, 0.2s, linear, 1);
@@ -251,13 +260,17 @@ body{
 			
 		}
 		.scroll-wrapper{
+			min-width: 0px;
 			position: absolute;
 			z-index: 0;
 			top: 0%;
 			width: 100%;
 			opacity: 1;
 			.content{
-				width: 70%;
+				min-width: 0px;
+				width: 73%;
+				margin-left: 20%;
+				padding-right: 10%;
 				.header{
 					font-size: 8vw;
 				}
