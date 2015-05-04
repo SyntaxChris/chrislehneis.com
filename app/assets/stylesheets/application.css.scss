@@ -218,19 +218,13 @@ body{
 
 
 
-
-
-
-
-
-
-
 @media only screen and (max-device-width : 640px) {
 	body{
 		.main-cntnr{
 			width: 100%;
 			padding-top: 4%;
 			// background: rgba(255, 255, 255, 0.5);
+			opacity: 0.6;
 			&.collapse{
 				@include animate(collapse, 0.2s, linear, 1);
 			}
@@ -244,6 +238,7 @@ body{
 			z-index: 0;
 			top: 0%;
 			width: 100%;
+			opacity: 1;
 			.content{
 				width: 70%;
 				.header{
@@ -251,7 +246,7 @@ body{
 				}
 				.body{
 					font-size: 4vw;
-					
+					font-weight: 200;
 				}
 			}
 		}
