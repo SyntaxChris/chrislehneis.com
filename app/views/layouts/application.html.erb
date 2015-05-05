@@ -8,10 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.7, user-scalable=0"/>
 </head>
 <body>
-	<div class="nav-wrapper">
-		<%= render 'layouts/svgs/navbar' %>	
-	</div>
+	<%= render 'layouts/svgs/navbar' %>	
 	<%= render 'layouts/svgs/face' %>
 	<%= yield %>
 </body>
 </html>
+<script>
+	// var handleMove = function (e) {
+	//     var scrollable = false;
+	//     var items = $(e.target).parents();
+	//     $(items).each(function(i,o) {
+	//         if($(o).hasClass("scrollable")) {
+	//             scrollable = true;
+	//         }
+	//     });
+	//     if(!scrollable)
+	//         e.preventDefault();
+	// };
+	// document.addEventListener('touchmove', handleMove, true);
+</script>
