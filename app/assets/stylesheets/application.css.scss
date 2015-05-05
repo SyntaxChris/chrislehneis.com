@@ -310,6 +310,7 @@ body{
     }
     100% {
     	-webkit-transform: translate3d(-100%, 0, 0);
+    	display: none;
     }
 }
 
@@ -319,6 +320,7 @@ body{
     }
     100% {
     	transform: translate3d(-100%, 0, 0);
+    	display: none;
     }
 }
 
@@ -328,6 +330,7 @@ body{
     }
     100% {
     	transform: translate3d(-100%, 0, 0);
+    	display: none;
     }
 }
 
@@ -337,6 +340,7 @@ body{
     }
     100% {
     	transform: translate3d(-100%, 0, 0);
+    	display: none;
     }
 }
 
@@ -346,6 +350,7 @@ body{
     }
     100% {
     	transform: translate3d(-100%, 0, 0);
+    	display: none;
     }
 }
 
@@ -357,6 +362,7 @@ body{
 @-webkit-keyframes expand {
     0% {
     	-webkit-transform: translate3d(-100%, 0, 0);
+    	display: block;
     }
     100% {
     	-webkit-transform: translate3d(0, 0, 0);
@@ -366,6 +372,7 @@ body{
 @-moz-keyframes expand {
     0% {
     	-moz-transform: translate3d(-100%, 0, 0);
+    	display: block;
     }
     100% {
     	-moz-transform: translate3d(0, 0, 0);
@@ -375,6 +382,7 @@ body{
 @-o-keyframes expand {
     0% {
     	-o-transform: translate3d(-100%, 0, 0);
+    	display: block;
     }
     100% {
     	-o-transform: translate3d(0, 0, 0);
@@ -384,6 +392,7 @@ body{
 @-ms-keyframes expand {
     0% {
     	-ms-transform: translate3d(-100%, 0, 0);
+    	display: block;
     }
     100% {
     	-ms-transform: translate3d(0, 0, 0);
@@ -393,6 +402,7 @@ body{
 @keyframes expand {
     0% {
     	transform: translate3d(-100%, 0, 0);
+    	display: block;
     }
     100% {
     	transform: translate3d(0, 0, 0);
