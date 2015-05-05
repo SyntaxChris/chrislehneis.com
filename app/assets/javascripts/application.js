@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require_tree .
 //= require 'navBar'
+$(document).ready(function(){
+	var handleMove = function (e) {
+	    var scrollable = false;
+	    var items = $(e.target).parents();
+	    $(items).each(function(i,o) {
+	        if($(o).hasClass("scrollable")) {
+	            scrollable = true;
+	        }
+	    });
+	    if(!scrollable)
+	        e.preventDefault();
+	};
+	document.addEventListener('touchmove', handleMove, true);
+});
