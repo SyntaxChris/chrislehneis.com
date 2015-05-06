@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index'
+  # match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
