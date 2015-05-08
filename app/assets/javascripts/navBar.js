@@ -1,9 +1,7 @@
 $(document).ready(function(){
 	var $container = $('.main-cntnr');
 	var $content = $('.content');
-	var $about = $('.about');
-	var $portfolio = $('.portfolio');
-	var $contact = $('.contact');
+	var $navBar = $('svg.navbar');
 	var containerOpen = false;
 
 	var slideTog = function(linkContent){
@@ -12,6 +10,7 @@ $(document).ready(function(){
 				$content.hide();
 				$container.addClass('collapse');
 				$container.removeClass('expand');
+				
 				containerOpen = false;
 			}else{
 				$content.hide();
@@ -21,6 +20,7 @@ $(document).ready(function(){
 					$container.removeClass('collapse');
 					$container.addClass('expand');
 					linkContent.delay(100).fadeIn();
+					
 				}, 320);
 			}
 		}else{
@@ -30,13 +30,19 @@ $(document).ready(function(){
 			}else{
 				$container.removeClass('collapse');
 				$container.addClass('expand');
+				
 				$content.hide();
 				linkContent.delay(100).fadeIn();
 			}
+			
 			containerOpen = true;
 		}
 	};
 
+	var $about = $('.about');
+	var $portfolio = $('.portfolio');
+	var $contact = $('.contact');
+	
 	$('.about-link').on('click', function(){
 		slideTog($about);
 	});
