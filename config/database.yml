@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   host: localhost
-  username: Chris
+  username: chris
   encoding: utf8
   pool: 5
 
