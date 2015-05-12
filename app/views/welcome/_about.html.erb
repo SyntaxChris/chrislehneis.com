@@ -12,17 +12,17 @@
 </div>
 <div class="icon-cntnr">
 	<div class="icon resume">
-		<%= link_to '/ChristopherLehneis.pdf', download: 'ChristopherLehneis' do %>
+		<a href="https://github.com/SyntaxChris">
 			<%= render 'layouts/svgs/gitHub' %>
-		<% end %>
-	</div>
-	<div class="icon git-hub">
-		<a href="https://github.com/SyntaxChris" target="_blank">
-			<%= render 'layouts/svgs/resumeLogo' %>
 		</a>
 	</div>
+	<div class="icon git-hub">
+		<%= link_to '/ChristopherLehneis.pdf', download: 'ChristopherLehneis' do %>
+			<%= render 'layouts/svgs/resumeLogo' %>
+		<% end %>
+	</div>
 	<div class="icon linked-in">
-		<a href="http://www.linkedin.com/pub/christopher-lehneis/29/7b4/340" target="_blank">
+		<a href="http://www.linkedin.com/pub/christopher-lehneis/29/7b4/340">
 			<%= render 'layouts/svgs/linkedIn' %>
 		</a>
 	</div>
