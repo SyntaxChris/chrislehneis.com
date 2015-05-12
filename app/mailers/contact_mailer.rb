@@ -1,4 +1,5 @@
 class ContactMailer < ApplicationMailer
+	# self.async = true
 	default from: "noreply@youdomain.dev"
 	default to: ENV['my_email']
 	 
