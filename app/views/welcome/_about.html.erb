@@ -1,35 +1,29 @@
-<!-- <div class="header"><span>//</span>ABOUT</div> -->
-<div class="icon-cntnr">
-		<div class="icon resume">
-			<%= link_to '/ChristopherLehneis.pdf', :download => 'ChristopherLehneis' do %>
-				<%= render 'layouts/svgs/resumeLogo' %>
-			<% end %>
-		</div>
-		<div class="icon git-hub">
-			<%= link_to '/ChristopherLehneis.pdf', target: "_blank" do %>
-				<%= render 'layouts/svgs/gitHub' %>
-			<% end %>
-		</div>
-		<div class="icon linked-in" target="_blank">
-			<a href="http://www.linkedin.com/pub/christopher-lehneis/29/7b4/340">
-				<%= render 'layouts/svgs/linkedIn' %>
-			</a>
-		</div>
-	</div>
+<div class="header"><span>//</span>&nbsp;&nbsp;A&nbsp;&nbsp;B&nbsp;&nbsp;O&nbsp;&nbsp;U&nbsp;&nbsp;T</div>
 <div class="body">
 	<p>
-		Artist, Engineer, and Full Stack Web Developer.  Military veteran and team player with a passion for expressing creativity with the latest web technologies.  Strong desire to develop clean and intuitive Front End UI/UX designs.  Prior experience with Automated Machining, Robotics, Prosthetics and Orthotics.  Served over 5 years in the United States Coast Guard as a Lead Electronics Technician for Long Range Aids to Navigations. 
+		I'm a full stack web developer with a passion for developing clean and intuitive front end UX/UI applications.  I enjoy programming with Ruby on Rails and Javascript, and am very excited about the future of web development.  
 	</p>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique optio assumenda harum possimus. Vel nemo repellendus alias adipisci, velit eius quo facere unde non! Fugit dolorem necessitatibus, beatae iure provident.
+		My passion for design and engineering began at an early age when I started helping my family develop prosthetic and orthotic devices.  Later I joined the U.S. Coast Guard and traveled the country on a team of Electronics buffs determained to upgrade all of the United States LORAN system stations.  
 	</p>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et neque nobis excepturi, ea totam asperiores consectetur, quisquam nesciunt quia assumenda repellendus amet, perferendis praesentium cum optio quos tenetur reprehenderit aliquid.
+		With the skillsets I've learned through out my life I enjoy a number of hobbies that include manipulating microcontrollers through programming, building vacuume tube guitar amplifiers, drawing, painting, and surfing.     
 	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi at ex excepturi numquam dolor culpa rerum libero id, quae placeat delectus esse eveniet ea, minima architecto laboriosam, voluptatibus officiis, molestias!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quasi voluptatibus ipsam? Sed veritatis, ea deleniti ipsam molestias, distinctio, perspiciatis aspernatur unde quod aliquid explicabo sit voluptate. Et, incidunt, expedita.
-	</p>
+</div>
+<div class="icon-cntnr">
+	<div class="icon resume">
+		<%= link_to '/ChristopherLehneis.pdf', download: 'ChristopherLehneis' do %>
+			<%= render 'layouts/svgs/gitHub' %>
+		<% end %>
+	</div>
+	<div class="icon git-hub">
+		<a href="https://github.com/SyntaxChris" target="_blank">
+			<%= render 'layouts/svgs/resumeLogo' %>
+		</a>
+	</div>
+	<div class="icon linked-in">
+		<a href="http://www.linkedin.com/pub/christopher-lehneis/29/7b4/340" target="_blank">
+			<%= render 'layouts/svgs/linkedIn' %>
+		</a>
+	</div>
 </div>
