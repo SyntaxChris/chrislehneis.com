@@ -194,6 +194,27 @@ body{
 					color: #A62828;
 				}
 			}
+			.icon-cntnr{
+				// border: 1px solid red;
+				width: 100%;
+				float: left;
+				.icon{
+					position: relative;
+					display: inline-block;
+					// float: left;
+					margin: 0;
+					padding: 0;
+					width: 32%;
+					// border: 1px solid green;
+					text-align: center;
+					&.resume{
+						// text-align: left;
+					}
+					&.linked-in{
+						// text-align: right;
+					}
+				}
+			}
 			&.about{
 				display: none;
 			}
@@ -206,6 +227,7 @@ body{
 			&.contact{
 				display: none;
 			}
+
 		}
 	}
 }
