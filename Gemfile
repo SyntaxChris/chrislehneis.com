@@ -36,6 +36,7 @@ gem 'pry'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +54,7 @@ group :development do
   gem 'guard-livereload', '~> 2.4', require: false
 end
 
-gem "rack-livereload", :group => :development
+gem "rack-livereload", group: :development
 
 
 
