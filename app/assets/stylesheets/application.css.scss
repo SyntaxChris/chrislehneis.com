@@ -224,6 +224,27 @@ body{
 	}
 }
 
+@media screen and (max-width: 550px){
+	body{
+		.main-cntnr{
+			width: 70%;
+		}
+		.scroll-wrapper{
+			padding-right: 10%;
+			.content{
+				width: 60%;
+				margin-left: 20%;
+				.header{
+					font-size: 7vw;
+				}
+				.body{
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+}
+
 
 @media only screen 
 and (max-device-width : 850px) 
@@ -330,17 +351,27 @@ and (orientation: landscape){
 			top: 0%;
 			width: 100%;
 			opacity: 1;
+			&::-webkit-scrollbar { 
+				width: 0 !important;
+				display: none;
+			}
 			.content{
 				min-width: 0px;
-				width: 73%;
-				margin-left: 22%;
-				padding-right: 10%;
+				width: 80%;
+				margin-left: 25%;
+				&::-webkit-scrollbar { 
+					width: 0 !important;
+					display: none;
+				}
 				.header{
 					font-size: 8vw;
 				}
 				.body{
 					font-size: 4vw;
 					font-weight: 200;
+					// for blurry lettering B)
+					// color: transparent;
+     //                text-shadow: 0 0 5px rgba(0,0,0,0.5);
 				}
 			}
 		}

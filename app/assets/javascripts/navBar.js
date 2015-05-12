@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var $navBar = $('svg.navbar');
 	var containerOpen = false;
 
-	var slideTog = function(linkContent){
+	var pageSlider = function(linkContent){
 		if(containerOpen){
 			if(linkContent.css('display') === 'block'){
 				$content.hide();
@@ -44,14 +44,14 @@ $(document).ready(function(){
 	var $contact = $('.contact');
 	
 	$('.about-link').on('click', function(){
-		slideTog($about);
+		pageSlider($about);
 	});
 
 	$('.portfolio-link').on('click', function(){
-		slideTog($portfolio);
+		pageSlider($portfolio);
 	});
 
 	$('.contact-link').on('click', function(){
-		slideTog($contact);
+		pageSlider($contact);
 	});
 });
