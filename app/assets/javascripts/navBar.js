@@ -12,53 +12,35 @@ $(document).ready(function(){
 				$content.hide();
 				$container.addClass('collapse');
 				$container.removeClass('expand');
-				
-				marker.attr({
-					'from' : mark,
-					'to' : 0
-				});
 				containerOpen = false;
 			}else{
 				$content.hide();
 				$container.addClass('collapse');
 				$container.removeClass('expand');
 				
-				marker.attr({
-					'from' : mark,
-					'to' : 0
-				});
+
 				setTimeout(function(){ 
 					$container.removeClass('collapse');
 					$container.addClass('expand');
 					linkContent.delay(100).fadeIn();
-					marker.attr({
-						'from' : 0,
-						'to' : mark
-					});
+					
 				}, 320);
 			}
 		}else{
 			if(linkContent.css('display') === 'block'){
 				$container.removeClass('collapse');
 				$container.addClass('expand');
-				marker.attr({
-					'from' : 0,
-					'to' : mark
-				});
+
 			}else{
 				$container.removeClass('collapse');
 				$container.addClass('expand');
-				marker.attr({
-					'from' : mark,
-					'to' : 0
-				});
+
 				$content.hide();
 				linkContent.delay(100).fadeIn();
 			}
 			
 			containerOpen = true;
 		}
-
 	};
 
 	var $about = $('.content.about');
@@ -70,7 +52,7 @@ $(document).ready(function(){
 	
 	$('.about-link').on('click', function(){
 		pageSlider($about, $aboutMarker);
-		
+		$('line.about').addClass('dash-show');
 	});
 
 	$('.portfolio-link').on('click', function(){

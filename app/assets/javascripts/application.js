@@ -15,19 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require 'navBar'
-
-// prevent scrolling for all elements except ones with scrollable class
-$(document).ready(function(){
-	var handleMove = function (e) {
-	    var scrollable = false;
-	    var items = $(e.target).parents();
-	    $(items).each(function(i,o) {
-	        if($(o).hasClass("scrollable")) {
-	            scrollable = true;
-	        }
-	    });
-	    if(!scrollable)
-	        e.preventDefault();
-	};
-	document.addEventListener('touchmove', handleMove, true);
-});
