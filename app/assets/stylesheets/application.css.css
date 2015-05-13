@@ -1,0 +1,903 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@font-face {
+  font-family: 'f37ginger';
+  src: font-url("f37ginger-regular-webfont.eot");
+  src: font-url("f37ginger-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("f37ginger-regular-webfont.woff") format("woff"), font-url("f37ginger-regular-webfont.ttf") format("truetype"), font-url("f37ginger-regular-webfont.svg#f37_gingerregular") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'f37ginger';
+  src: font-url("f37ginger-light-webfont.eot");
+  src: font-url("f37ginger-light-webfont.eot?#iefix") format("embedded-opentype"), font-url("f37ginger-light-webfont.woff") format("woff"), font-url("f37ginger-light-webfont.ttf") format("truetype"), font-url("f37ginger-light-webfont.svg#f37_gingerlight") format("svg");
+  font-weight: 200;
+  font-style: normal; }
+@font-face {
+  font-family: 'f37ginger';
+  src: font-url("f37ginger-thin-webfont.eot");
+  src: font-url("f37ginger-thin-webfont.eot?#iefix") format("embedded-opentype"), font-url("f37ginger-thin-webfont.woff") format("woff"), font-url("f37ginger-thin-webfont.ttf") format("truetype"), font-url("f37ginger-thin-webfont.svg#f37_gingerthin") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #DAE6DF;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: fixed;
+  font-family: 'f37ginger', 'Lato', sans-serif;
+  font-weight: 100; }
+  body .nav-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    z-index: 10; }
+    body .nav-wrapper svg.navbar {
+      position: absolute;
+      height: 100.5%;
+      bottom: 0;
+      opacity: 1; }
+      body .nav-wrapper svg.navbar .about-link,
+      body .nav-wrapper svg.navbar .portfolio-link,
+      body .nav-wrapper svg.navbar .contact-link {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent; }
+  body svg.face {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    height: 100%;
+    right: 0;
+    opacity: 0.4; }
+  body .main-cntnr {
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    width: 65%;
+    min-width: 500px;
+    height: 100%;
+    background: white;
+    border-right: 1px solid #A62828;
+    opacity: 0.5;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+    body .main-cntnr::-webkit-scrollbar {
+      width: 0 !important;
+      display: none; }
+    body .main-cntnr.collapse {
+      -webkit-animation-name: collapse;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: collapse;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: collapse;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: collapse;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: collapse;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+    body .main-cntnr.expand {
+      -webkit-animation-name: expand;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: expand;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: expand;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: expand;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: expand;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+  body .scroll-wrapper {
+    position: absolute;
+    z-index: 3;
+    top: 0%;
+    width: 65%;
+    min-width: 500px;
+    height: 100%;
+    padding-top: 1%;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; }
+    body .scroll-wrapper::-webkit-scrollbar {
+      width: 0 !important;
+      display: none; }
+    body .scroll-wrapper .content {
+      position: relative;
+      margin-left: 20%;
+      margin-right: auto;
+      overflow-x: hidden;
+      width: 70%;
+      height: 100%; }
+      body .scroll-wrapper .content::-webkit-scrollbar {
+        width: 0 !important;
+        display: none; }
+      body .scroll-wrapper .content .header {
+        font-size: 30px;
+        text-align: center;
+        font-weight: 300; }
+        body .scroll-wrapper .content .header span {
+          color: #A62828; }
+      body .scroll-wrapper .content .icon-cntnr {
+        width: 100%;
+        float: left;
+        margin-top: 5%;
+        margin-bottom: 10%; }
+        body .scroll-wrapper .content .icon-cntnr .icon {
+          position: relative;
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          width: 32%;
+          text-align: center; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume svg circle {
+            -webkit-animation-name: resume-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume svg text {
+            -webkit-animation-name: resume-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume svg rect {
+            -webkit-animation-name: resume-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume:hover svg circle {
+            -webkit-animation-name: resume-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume:hover svg text {
+            -webkit-animation-name: resume-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.resume:hover svg rect {
+            -webkit-animation-name: resume-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: resume-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: resume-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: resume-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: resume-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.git-hub svg path {
+            -webkit-animation-name: git-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: git-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: git-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: git-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: git-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.git-hub:hover svg path {
+            -webkit-animation-name: git-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: git-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: git-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: git-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: git-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in svg circle {
+            -webkit-animation-name: linked-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in svg rect {
+            -webkit-animation-name: linked-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in svg path.n {
+            -webkit-animation-name: linked-color-out;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-out;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-out;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-out;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-out;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in:hover svg circle {
+            -webkit-animation-name: linked-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in:hover svg rect {
+            -webkit-animation-name: linked-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon.linked-in:hover svg path.n {
+            -webkit-animation-name: linked-color-in;
+            -webkit-animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-name: linked-color-in;
+            -moz-animation-duration: 0.3s;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: 1;
+            -moz-animation-fill-mode: forwards;
+            -ms-animation-name: linked-color-in;
+            -ms-animation-duration: 0.3s;
+            -ms-animation-timing-function: linear;
+            -ms-animation-iteration-count: 1;
+            -ms-animation-fill-mode: forwards;
+            -o-animation-name: linked-color-in;
+            -o-animation-duration: 0.3s;
+            -o-animation-timing-function: linear;
+            -o-animation-iteration-count: 1;
+            -o-animation-fill-mode: forwards;
+            animation-name: linked-color-in;
+            animation-duration: 0.3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards; }
+          body .scroll-wrapper .content .icon-cntnr .icon svg {
+            width: 35%;
+            height: 35%;
+            opacity: 0.8; }
+          body .scroll-wrapper .content .icon-cntnr .icon .text {
+            font-weight: 200; }
+      body .scroll-wrapper .content.about {
+        display: none; }
+      body .scroll-wrapper .content.portfolio {
+        display: none; }
+      body .scroll-wrapper .content.contact {
+        display: none; }
+      body .scroll-wrapper .content .body {
+        font-weight: 200; }
+
+@media screen and (max-width: 895px) {
+  body .main-cntnr {
+    width: 70%; }
+  body .scroll-wrapper .content {
+    margin-left: 27%; } }
+@media screen and (max-width: 550px) {
+  body .main-cntnr {
+    width: 70%; }
+  body .scroll-wrapper {
+    padding-right: 10%; }
+    body .scroll-wrapper .content {
+      width: 60%;
+      margin-left: 20%; }
+      body .scroll-wrapper .content .header {
+        font-size: 7vw; }
+      body .scroll-wrapper .content .body {
+        font-size: 3vw; } }
+@media only screen and (max-device-width: 850px) and (min-device-width: 641px) and (orientation: portrait) {
+  body .main-cntnr {
+    width: 85%;
+    background: rgba(255, 255, 255, 0.8); }
+  body .scroll-wrapper {
+    width: 85%; }
+    body .scroll-wrapper::-webkit-scrollbar {
+      width: 0 !important;
+      display: none; }
+    body .scroll-wrapper .content {
+      margin-left: 25%; }
+      body .scroll-wrapper .content::-webkit-scrollbar {
+        width: 0 !important;
+        display: none; }
+      body .scroll-wrapper .content .header {
+        font-size: 5vw; }
+      body .scroll-wrapper .content .body {
+        font-size: 2.6vw; } }
+@media only screen and (max-device-width: 850px) and (min-device-width: 641px) and (orientation: landscape) {
+  body .main-cntnr {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.8); }
+  body .scroll-wrapper {
+    width: 80%; }
+    body .scroll-wrapper::-webkit-scrollbar {
+      width: 0 !important;
+      display: none; }
+    body .scroll-wrapper .content {
+      margin-left: 20%; }
+      body .scroll-wrapper .content::-webkit-scrollbar {
+        width: 0 !important;
+        display: none; }
+      body .scroll-wrapper .content .header {
+        font-size: 4vw; }
+      body .scroll-wrapper .content .body {
+        font-size: 2vw; } }
+@media only screen and (max-device-width: 640px) {
+  body .main-cntnr {
+    min-width: 0px;
+    width: 100%;
+    padding-top: 4%;
+    min-width: 0px;
+    opacity: 0.6; }
+    body .main-cntnr.collapse {
+      -webkit-animation-name: collapse;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: collapse;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: collapse;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: collapse;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: collapse;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+    body .main-cntnr.expand {
+      -webkit-animation-name: expand;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: expand;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: expand;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: expand;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: expand;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+  body svg.face {
+    opacity: 0.4; }
+  body .nav-wrapper svg.navbar rect {
+    opacity: 0.7; }
+  body .nav-wrapper svg.navbar .about-link,
+  body .nav-wrapper svg.navbar .portfolio-link,
+  body .nav-wrapper svg.navbar .contact-link {
+    -webkit-tap-highlight-color: transparent; }
+  body .scroll-wrapper {
+    min-width: 0px;
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    width: 100%;
+    opacity: 1; }
+    body .scroll-wrapper::-webkit-scrollbar {
+      width: 0 !important;
+      display: none; }
+    body .scroll-wrapper .content {
+      min-width: 0px;
+      width: 80%;
+      margin-left: 25%; }
+      body .scroll-wrapper .content::-webkit-scrollbar {
+        width: 0 !important;
+        display: none; }
+      body .scroll-wrapper .content .header {
+        font-size: 7vw;
+        padding-bottom: -20px; }
+      body .scroll-wrapper .content .icon-cntnr {
+        margin-top: 0; }
+        body .scroll-wrapper .content .icon-cntnr .icon svg {
+          width: 50%;
+          height: 50%; }
+      body .scroll-wrapper .content .body {
+        font-size: 4vw;
+        font-weight: 200; } }
+@media only screen and (max-device-width: 640px) and (orientation: landscape) {
+  body .main-cntnr {
+    min-width: 0px;
+    width: 100%;
+    padding-top: 4%;
+    min-width: 0px;
+    opacity: 0.6; }
+    body .main-cntnr.collapse {
+      -webkit-animation-name: collapse;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: collapse;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: collapse;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: collapse;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: collapse;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+    body .main-cntnr.expand {
+      -webkit-animation-name: expand;
+      -webkit-animation-duration: 0.2s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-name: expand;
+      -moz-animation-duration: 0.2s;
+      -moz-animation-timing-function: linear;
+      -moz-animation-iteration-count: 1;
+      -moz-animation-fill-mode: forwards;
+      -ms-animation-name: expand;
+      -ms-animation-duration: 0.2s;
+      -ms-animation-timing-function: linear;
+      -ms-animation-iteration-count: 1;
+      -ms-animation-fill-mode: forwards;
+      -o-animation-name: expand;
+      -o-animation-duration: 0.2s;
+      -o-animation-timing-function: linear;
+      -o-animation-iteration-count: 1;
+      -o-animation-fill-mode: forwards;
+      animation-name: expand;
+      animation-duration: 0.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
+  body svg.face {
+    opacity: 0.4; }
+  body .nav-wrapper svg.navbar rect {
+    opacity: 0.7; }
+  body .nav-wrapper svg.navbar .about-link,
+  body .nav-wrapper svg.navbar .portfolio-link,
+  body .nav-wrapper svg.navbar .contact-link {
+    -webkit-tap-highlight-color: transparent; }
+  body .scroll-wrapper {
+    min-width: 0px;
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    width: 100%;
+    opacity: 1; }
+    body .scroll-wrapper .content {
+      min-width: 0px;
+      width: 75%;
+      margin-left: 15%;
+      padding-right: 10%; }
+      body .scroll-wrapper .content .header {
+        font-size: 6vw; }
+      body .scroll-wrapper .content .body {
+        font-size: 2.5vw;
+        font-weight: 200; } }
+@-webkit-keyframes git-color-in {
+  to {
+    fill: #35A1A1; } }
+@-webkit-keyframes git-color-out {
+  from {
+    fill: #35A1A1; }
+  to {
+    fill: #000000; } }
+@-webkit-keyframes linked-color-in {
+  to {
+    fill: #1C87BD; } }
+@-webkit-keyframes linked-color-out {
+  from {
+    fill: #1C87BD; }
+  to {
+    fill: #000000; } }
+@-webkit-keyframes resume-color-in {
+  to {
+    fill: #A13535; } }
+@-webkit-keyframes resume-color-out {
+  from {
+    fill: #A13535; }
+  to {
+    fill: #000000; } }
+@-webkit-keyframes collapse {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 0.6; }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+@-moz-keyframes collapse {
+  0% {
+    -moz-transform: translate3d(0, 0, 0);
+    opacity: 0.6; }
+  100% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+@-o-keyframes collapse {
+  0% {
+    -o-transform: translate3d(0, 0, 0);
+    opacity: 0.6; }
+  100% {
+    -o-transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+@-ms-keyframes collapse {
+  0% {
+    -ms-transform: translate3d(0, 0, 0);
+    opacity: 0.6; }
+  100% {
+    -ms-transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+@keyframes collapse {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6; }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 0.6; } }
+@-moz-keyframes expand {
+  0% {
+    -moz-transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+    opacity: 0.6; } }
+@-o-keyframes expand {
+  0% {
+    -o-transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  100% {
+    -o-transform: translate3d(0, 0, 0);
+    opacity: 0.6; } }
+@-ms-keyframes expand {
+  0% {
+    -ms-transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  100% {
+    -ms-transform: translate3d(0, 0, 0);
+    opacity: 0.6; } }
+@keyframes expand {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6; } }
+
+/*# sourceMappingURL=application.css.css.map */

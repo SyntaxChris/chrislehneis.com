@@ -11,19 +11,28 @@
 	</p>
 </div>
 <div class="icon-cntnr">
-	<div class="icon resume">
+	<div class="icon git-hub">
 		<a href="https://github.com/SyntaxChris">
 			<%= render 'layouts/svgs/gitHub' %>
 		</a>
+		<div class="text">
+			GitHub
+		</div>
 	</div>
-	<div class="icon git-hub">
+	<div class="icon resume">
 		<%= link_to '/ChristopherLehneis.pdf', download: 'ChristopherLehneis' do %>
 			<%= render 'layouts/svgs/resumeLogo' %>
 		<% end %>
+		<div class="text">
+			Résumé
+		</div>
 	</div>
 	<div class="icon linked-in">
 		<a href="http://www.linkedin.com/pub/christopher-lehneis/29/7b4/340">
 			<%= render 'layouts/svgs/linkedIn' %>
 		</a>
+		<div class="text">
+			LinkedIn
+		</div>
 	</div>
 </div>

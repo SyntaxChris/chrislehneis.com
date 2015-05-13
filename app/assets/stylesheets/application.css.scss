@@ -205,15 +205,96 @@ body{
 					width: 32%;
 					text-align: center;
 					&.resume{
+						svg{
+							circle{
+								@include animate(resume-color-out, 0.2s, ease-in, 1);
+								}
+							text{
+								@include animate(resume-color-out, 0.2s, ease-in, 1);
+							}
+							rect{
+								@include animate(resume-color-out, 0.2s, ease-in, 1);
+							}
+						}
+						.text{
+							@include animate(resume-color-out, 0.2s, ease-in, 1);
+						}
+						&:hover{
+							svg{
+								circle{
+									@include animate(resume-color-in, 0.2s, ease-in, 1);
+								}
+								text{
+									@include animate(resume-color-in, 0.2s, ease-in, 1);
+								}
+								rect{
+									@include animate(resume-color-in, 0.2s, ease-in, 1);
+								}
+							}
+							.text{
+								@include animate(resume-color-in, 0.2s, ease-in, 1);
+							}
+						}
 					}
 					&.git-hub{
+						svg{
+							path{
+								@include animate(git-color-out, 0.2s, ease-in, 1);
+							}
+						}
+						.text{
+							@include animate(git-color-out, 0.2s, ease-in, 1);
+						}
+						&:hover{
+							svg{
+								path{
+									@include animate(git-color-in, 0.2s, ease-in, 1);
+								}
+							}
+							.text{
+								@include animate(git-color-in, 0.2s, ease-in, 1);
+							}
+						}
 					}
 					&.linked-in{
+						svg{
+							circle{
+								@include animate(linked-color-out, 0.2s, ease-in, 1);
+							}
+							rect{
+								@include animate(linked-color-out, 0.2s, ease-in, 1);
+							}
+							path.n{
+								@include animate(linked-color-out, 0.2s, ease-in, 1);
+							}
+							.text{
+								@include animate(linked-color-in, 0.2s, ease-in, 1);
+							}
+						}
+						&:hover{
+							svg{
+								circle{
+									@include animate(linked-color-in, 0.2s, ease-in, 1);
+								}
+								rect{
+									@include animate(linked-color-in, 0.2s, ease-in, 1);
+								}
+								path.n{
+									@include animate(linked-color-in, 0.2s, ease-in, 1);
+								}
+							}
+							.text{
+								@include animate(linked-color-in, 0.2s, ease-in, 1);
+							}
+						}
 					}
 					svg{
 						width: 35%;
 						height: 35%;
 						opacity: 0.8;
+					}
+					.text{
+						font-weight: 200;
 					}
 				}
 			}
@@ -391,9 +472,10 @@ and (orientation: landscape){
 				}
 				.header{
 					font-size: 7vw;
-					margin-bottom:-10px;
+					padding-bottom:-20px;
 				}
 				.icon-cntnr{
+					margin-top: 0;
 					.icon{
 
 						&.resume{
@@ -480,19 +562,60 @@ and (orientation : landscape){
 
 
 
-@-webkit-keyframes dash-show{
+@-webkit-keyframes git-color-in{
 	to{
-		stroke-dashoffset: 0;
+		fill: #35A1A1;
+		color: #35A1A1;
 	}
 }
 
-@-webkit-keyframes dash-hide{
+@-webkit-keyframes git-color-out{
+	from{
+		fill: #35A1A1;
+		color: #35A1A1;
+	}
 	to{
-		stroke-dashoffset: 126;
+		fill: #000000;
+		color: #000000;
 	}
 }
 
 
+@-webkit-keyframes linked-color-in{
+	to{
+		fill: #1C87BD;
+		color: #1C87BD;
+	}
+}
+
+@-webkit-keyframes linked-color-out{
+	from{
+		fill: #1C87BD;
+		color: #1C87BD;
+	}
+	to{
+		fill: #000000;
+		color: #000000;
+	}
+}
+
+@-webkit-keyframes resume-color-in{
+	to{
+		fill: #A13535;
+		color:#A13535;
+	}
+}
+
+@-webkit-keyframes resume-color-out{
+	from{
+		fill: #A13535;
+		color: #A13535;
+	}
+	to{
+		fill: #000000;
+		color: #000000;
+	}
+}
 
 
 
