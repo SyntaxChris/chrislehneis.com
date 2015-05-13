@@ -1,6 +1,6 @@
 default: &default
-  adapter: postgresql
   host: localhost
+  adapter: postgresql
   username: chris
   password: postgres
   encoding: utf8
@@ -8,20 +8,16 @@ default: &default
 
 development:
   <<: *default
-  database: profile_development
+  database: development
 
 production:
-  adapter: postgresql
-  host: localhost
-  username: chris
-  password: postgres
-  encoding: utf8
-  database: profile_production
+  <<: *default
+  database: production
 
 test:
   <<: *default
-  database: profile_test
+  database: test
 
 staging:
   <<: *default
-  database: profile_staging
+  database: staging
